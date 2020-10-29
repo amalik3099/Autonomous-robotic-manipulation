@@ -1,0 +1,18 @@
+function [ logical ] = singularityCheck( j1, j2, j3 )
+%SINGULARITYCHECK Summary of this function goes here
+%   Detailed explanation goes here
+
+threshold = 20;
+
+if (j1 < 0 + threshold || j1 > 0 - threshold) && (j2 < 0 + threshold || j2 > 0 - threshold)...
+        && (j3 < pi/2 + threshold || j3 > pi/2 - threshold);
+    error("Arm approached boundary singularity in the outwards configuration")
+end
+
+if (j1 < 0 + threshold || j1 > 0 - threshold) && (j2 < 0 + threshold || j2 > 0 - threshold)...
+        && (j3 < pi/2 + threshold || j3 > pi/2 - threshold);
+    error("Arm approached boundary singularity in the outwards configuration")
+end
+
+end
+
